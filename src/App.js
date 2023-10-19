@@ -7,11 +7,11 @@ import NewsApp from './NewsApp'
 import { Route, Routes } from 'react-router-dom'
 
 
-import India from './india'
-import Bollywood from './Bollywood'
+import Science from './Science'
+import Entertainment from './Entertainment'
 import Business from './Business'
 import Health from './Health'
-import Politics from './Politics'
+import Technology from './Technology'
 import Sports from './Sports'
 
 function App() {
@@ -20,10 +20,10 @@ function App() {
     <Routes>
     <Route path="/" element={<NewsApp/>}   />
      
-      <Route path="/india" element={<India/>}   />
+      <Route path="/science" element={<Science/>}   />
       <Route path="/sports" element={<Sports/>}   />
-      <Route path="/bollywood" element={<Bollywood/>}   />
-      <Route path="/politics" element={<Politics/>}   />
+      <Route path="/entertainment" element={<Entertainment/>}   />
+      <Route path="/technology" element={<Technology/>}   />
       <Route path="/bussiness" element={<Business/>}   />
       <Route path="/health" element={<Health/>}   />
 

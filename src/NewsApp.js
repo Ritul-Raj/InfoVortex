@@ -9,10 +9,10 @@ const [newlist,setnewlist]=useState([]);
 const[query,setquery]=useState('general');
 
 
-// const api_url=`https://newsapi.org/v2/everything?q=${query}&apiKey=bc2d065ecb01409fa460c222c16a10db`;
-// const api_url=`https://newsapi.org/v2/everything?q=${query}&apiKey=fac6d0a815984d429c5ca45bc87566b8`;
-const api_url=`https://gnews.io/api/v4/top-headlines?category=${query}&lang=en&country=in&max=10&apikey=68e87169219d1088414fc385fb28887b`;
 
+// const api_url=`https://gnews.io/api/v4/top-headlines?category=${query}&lang=en&country=in&max=10&apikey=68e87169219d1088414fc385fb28887b`;
+// const api_url=`https://gnews.io/api/v4/top-headlines?category=${query}&lang=en&country=in&max=20&apikey=b66dac9165441eaa71a59fc08f66dafe`;
+const api_url=`https://gnews.io/api/v4/top-headlines?category=${query}&apikey=b66dac9165441eaa71a59fc08f66dafe`;
 const queryinputref=useRef(null);
 
   useEffect(()=>{ fetchdata(); },[query]) 
@@ -52,10 +52,11 @@ return (
  
   <li style={{borderRight:'1px solid #bbb',backgroundColor:'rgb(15, 24, 163)'}} className='navbarnews'  ><Link to="/" className='a'>Home</Link></li>
 
-  <li className='navbarnews '  ><Link to="/india" className='a'>India</Link></li>
+  
   <li className='navbarnews'  ><Link to="/sports" className='a'>Sports</Link></li>
-  <li className='navbarnews' ><Link to="/bollywood" className='a'>BollyWood</Link></li>
-  <li className='navbarnews'  ><Link to="/politics" className='a'>Politics</Link></li>
+  <li className='navbarnews '  ><Link to="/science" className='a'>Science</Link></li>
+  <li className='navbarnews' ><Link to="/entertainment" className='a'>Entertainment</Link></li>
+  <li className='navbarnews'  ><Link to="/technology" className='a'>Technology</Link></li>
   <li className='navbarnews' ><Link to="/bussiness" className='a'>Business</Link></li>
   <li className='navbarnews' ><Link to="/health" className='a'>Health & Fitness</Link></li>
 

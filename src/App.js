@@ -1,7 +1,4 @@
 
-
-
-
 import React from 'react'
 import NewsApp from './NewsApp'
 import { Route, Routes } from 'react-router-dom'

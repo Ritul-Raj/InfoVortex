@@ -46,17 +46,30 @@ return (
 <input  className='btn_submit' onClick={handlesubmit} type='submit' value='🔍Search'></input>
 </div>
 <ul onSubmit={handlesubmit} >
-  <li  style={{borderRight:'1px solid #bbb',backgroundColor:' #de1b1b'}}><a href='#'>Latest News :</a></li>
-
- 
-  <li style={{borderRight:'1px solid #bbb',backgroundColor:'rgb(15, 24, 163)'}} className='navbarnews'  ><Link to="/" className='a'>Home</Link></li>
-
-  <li className='navbarnews'  ><Link to="/sports" className='a'>Sports</Link></li>
-  <li className='navbarnews '  ><Link to="/science" className='a'>Science</Link></li>
-  <li className='navbarnews' ><Link to="/entertainment" className='a'>Entertainment</Link></li>
-  <li className='navbarnews'  ><Link to="/technology" className='a'>Technology</Link></li>
-  <li className='navbarnews' ><Link to="/bussiness" className='a'>Business</Link></li>
-  <li className='navbarnews' ><Link to="/health" className='a'>Health & Fitness</Link></li>
+<div class="nav">
+  <input type="checkbox" id="nav-check"/>
+  <div class="nav-header">
+    <div style={{borderRight:'1px solid #bbb',backgroundColor:' #de1b1b',borderRadius:'3px'}} class="nav-title">
+  Hots Topics⏩
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <div  class="nav-links">
+<Link  to="/" className='a'>Home</Link>
+<Link to="/sports" className='a'>Sports</Link>
+<Link to="/science" className='a'>Science</Link>
+<Link to="/entertainment" className='a'>Entertainment</Link>
+<Link to="/technology" className='a'>Technology</Link>
+<Link to="/bussiness" className='a'>Business</Link>
+<Link to="/health" className='a'>Health & Fitness</Link>
+  </div>
+</div>
 
 </ul>
 

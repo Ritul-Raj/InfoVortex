@@ -8,11 +8,9 @@ function NewsApp() {
 const [newlist,setnewlist]=useState([]);
 const[query,setquery]=useState('general');
 
-
-
-// const api_url=`https://gnews.io/api/v4/top-headlines?category=${query}&lang=en&country=in&max=10&apikey=68e87169219d1088414fc385fb28887b`;
+const api_url=`https://gnews.io/api/v4/top-headlines?category=${query}&lang=en&country=in&max=10&apikey=68e87169219d1088414fc385fb28887b`;
 // const api_url=`https://gnews.io/api/v4/top-headlines?category=${query}&lang=en&country=in&max=20&apikey=b66dac9165441eaa71a59fc08f66dafe`;
-const api_url=`https://gnews.io/api/v4/top-headlines?category=${query}&apikey=b66dac9165441eaa71a59fc08f66dafe`;
+// const api_url=`https://gnews.io/api/v4/top-headlines?category=${query}&apikey=b66dac9165441eaa71a59fc08f66dafe`;
 const queryinputref=useRef(null);
 
   useEffect(()=>{ fetchdata(); },[query]) 
@@ -44,27 +42,42 @@ return (
 <input style={{position:'sticky',top: '0',fontFamily:'cursive'}} placeholder='e.g. Science' className='query_input' type='text' ref={queryinputref}/>
 <input  className='btn_submit' onClick={handlesubmit} type='submit' value='🔍Search'></input>
 </div>
-  <div style={{fontSize:'1.5rem', color:'red', fontFamily:"sans-serif",fontWeight:'bolder' }}> <marquee behavior="scroll" direction="right">🆕 !! Now get ⭐Latest News⭐ daily On Our beginner Friendly App ⏩News📰Daily⏪  !! 🆕  </marquee></div>
+  <div style={{fontSize:'1.5rem', color:'red', fontFamily:"sans-serif",fontWeight:'bolder' }}> <marquee behavior="scroll" direction="right">🆕 !! Now get ⭐Latest News⭐ daily On Our beginner Friendly App 🔹News📰Daily🔹  !! 🆕  </marquee></div>
 <ul onSubmit={handlesubmit} >
-
-  <li  style={{borderRight:'1px solid #bbb',backgroundColor:' #de1b1b'}}><a href='#'>Latest News :</a></li>
-
- 
-  <li style={{borderRight:'1px solid #bbb',backgroundColor:'rgb(15, 24, 163)'}} className='navbarnews'  ><Link to="/" className='a'>Home</Link></li>
-
+     
+  <div class="nav">
+  <input type="checkbox" id="nav-check"/>
+  <div class="nav-header">
+    <div style={{borderRight:'1px solid #bbb',backgroundColor:' #de1b1b',borderRadius:'3px'}} class="nav-title">
+  Hots Topics⏩
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <div  class="nav-links">
+<Link style={{fontWeight:'bolder'}} to="/" className='a'>home</Link>
+<Link to="/sports" className='a'>Sports</Link>
+<Link to="/science" className='a'>Science</Link>
+<Link to="/entertainment" className='a'>Entertainment</Link>
+<Link to="/technology" className='a'>Technology</Link>
+<Link to="/bussiness" className='a'>Business</Link>
+<Link to="/health" className='a'>Health & Fitness</Link>
+  </div>
+</div>
   
-  <li className='navbarnews'  ><Link to="/sports" className='a'>Sports</Link></li>
-  <li className='navbarnews '  ><Link to="/science" className='a'>Science</Link></li>
-  <li className='navbarnews' ><Link to="/entertainment" className='a'>Entertainment</Link></li>
-  <li className='navbarnews'  ><Link to="/technology" className='a'>Technology</Link></li>
-  <li className='navbarnews' ><Link to="/bussiness" className='a'>Business</Link></li>
-  <li className='navbarnews' ><Link to="/health" className='a'>Health & Fitness</Link></li>
-
 </ul>
 
 <br></br> 
   
   </form>
+
+  
+
 
   <div style={{display:'grid',gridTemplateColumns:'repeat(2,48%)',justifyContent:'space-between',rowGap:'20px'}} >
   {newlist?.map(newsdata=>{

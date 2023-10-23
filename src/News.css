@@ -37,3 +37,15 @@ transform: translateY(-4px);
     border: 1px solid rgb(77, 129, 201);
     /* color: rgb(52, 125, 228); */
 }
+
+
+@media (max-width:600px) {
+    .btn_readmore{
+      
+        width: 50%;
+      
+        padding-block: 3px;
+        
+    }
+    
+  }

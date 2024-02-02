@@ -34,7 +34,7 @@ const queryinputref=useRef(null);
 return (
 
   <div className='news_app'>
-  <h1 className='headingh1'>News📰Daily</h1>
+  <h1 className='headingh1'>Info📰Vortex</h1>
  
   <form style={{textAlign:'center'}} onSubmit={handlesubmit}>
 
